@@ -42,14 +42,11 @@ def make_single_string_object(gp_segment):
             indexes_to_delete.append([road])
             for i in range(len(multistrings)):
                 temp_df_object['geometry'] = multistrings[i]
-                new_df_with_col_names = new_df_with_col_names.append(temp_df_object)  
+                new_df_with_col_names = new_df_with_col_names.append(temp_df_object, ignore_index=True)  
             
         else:
-            continue
-    if len(indexes_to_delete)!=0:
-        gp_segment = gp_segment.drop(gp_segment.index[tuple(indexes_to_delete)])
-        gp_segment = gp_segment.append(new_df_with_col_names, ignore_index = True)
-    return gp_segment
+            new_df_with_col_names = new_df_with_col_names.append(gp_segment.iloc[road], ignore_index=True)           
+    return new_df_with_col_names
             
 def getpolygons(csv_files):
     list_polygons = []
@@ -86,9 +83,7 @@ def drop_columns_and_add_one(pd_df, pd_dataframe_type):
                          'ITI_CYCL','IT_VERT','LARGEUR','NATURE','NAT_RESTR','NB_VOIES','NOM_1_D','NOM_1_G','NOM_2_D','NOM_2_G','NUMERO',
                           'NUM_EUROP','POS_SOL'], axis=1)        
         pd_df['Nature'] = 0
-        #last step - convert from 3D coordinates to 2D (Z LineString to LineString)
-        for i in range(len(pd_df)):
-            pd_df.iloc[i,1] = LineString([xy[0:2] for xy in list(pd_df.iloc[i,1].coords)]) 
+
     else:       #water
         pd_df = pd_df.drop(['CODE_HYDRO','COMMENT','DATE_APP', 
                                       'DATE_CONF','DATE_CREAT','DATE_MAJ',
