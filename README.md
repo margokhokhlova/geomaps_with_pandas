@@ -4,7 +4,7 @@ This is an implementation I use to convert vector data to images or graphs. The 
 
 # graphs from geometries
 - data_parser_distinguished_graphs.ipynb improved notebook which will create graphs from vector data
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/graph.png)
+![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/resulting_graph_2.png)
  you will also need helper_functions to run it, and the BD TOPO data from IGN. 
 graph_nx_for_web.ipynb - draft notebook creating graphs using road and river networks only.
 
