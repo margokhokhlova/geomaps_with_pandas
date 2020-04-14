@@ -1,12 +1,12 @@
 
 
-This is an implementation I use to convert vector data to images or graphs. The project is in its draft stage, so I plan to clean and organize the code prior to a publication, and the version provided here is just a working fast code.
+This is an implementation I use to convert vector data to images or graphs. The project is in its draft stage, so I plan to clean and organize the code prior to a publication, and the version provided here is just a working code.
 
 # graphs from geometries
-graph_nx_for_web.ipynb
-- notebook creating graphs using road and river networks only.
 - data_parser_distinguished_graphs.ipynb improved notebook which will create graphs from vector data
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/graph_visual2.png)
+![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/graph.png)
+ you will also need helper_functions to run it, and the BD TOPO data from IGN. 
+graph_nx_for_web.ipynb - draft notebook creating graphs using road and river networks only.
 
 # geomaps_with_pandas
 
