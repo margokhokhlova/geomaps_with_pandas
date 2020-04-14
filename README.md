@@ -5,7 +5,9 @@ This is an implementation I use to convert vector data to images or graphs. The 
 # graphs from geometries
 - data_parser_distinguished_graphs.ipynb improved notebook which will create graphs from vector data
 ![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/resulting_graph_2.png)
- you will also need helper_functions to run it, and the BD TOPO data from IGN. 
+ 
+ You will also need helper_functions.py to run it, and the BD TOPO data from IGN. The graph uses Delaunay triangulation by default, but there is a function which can calculate geodesic distance between the objects to connect nodes based on that instead.
+ 
 graph_nx_for_web.ipynb - draft notebook creating graphs using road and river networks only.
 
 # geomaps_with_pandas
