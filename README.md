@@ -16,13 +16,13 @@ The polygons for Moselle deparments are given for the reference as well in a sha
 Please, check the notebook:
 ### RNG_graph_creation_demo.ipynb
 The notebook shows how to create RNG attributed  graphs using the algorithm introduced in [1].
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/meurthe_last_ign_rng.png)
 
 
 # Delaunay graphs creation script for OSM data
 The notebook shows how to create RNG attributed  graphs using the Delaunay triangulation (check the difference between RNG and Delaunay graphs in [1])
 ### Delaunay_graphs_creation_demo.ipynb
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/2004_delaunay.png)
+
+![An example of the resulting graphs created for OSM and IGN data](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/rng_delaunay.png)
  
 # Just a semantic map creation from shapely OSM/IGN data
 
