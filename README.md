@@ -14,22 +14,18 @@ The polygons for Moselle deparments are given for the reference as well in a sha
 Please, check the notebook:
 ### RNG_graph_creation_demo.ipynb
 The notebook shows how to create RNG attributed  graphs using the algorithm introduced in [1].
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/resulting_graph_2.png)
+![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/meurthe_last_ign_rng.png.png)
 
 
-# graphs from geometries
-- data_parser_distinguished_graphs.ipynb improved notebook which will create graphs from vector data
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/resulting_graph_2.png)
+# Delaunay graphs creation script for OSM data
+The notebook shows how to create RNG attributed  graphs using the Delaunay triangulation (check the difference between RNG and Delaunay graphs in [1])
+### Delaunay_graphs_creation_demo.ipynb
+![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/2004_delaunay.png)
  
- You will also need helper_functions.py to run it, and the BD TOPO data from IGN. The graph uses Delaunay triangulation by default, but there is a function which can calculate geodesic distance between the objects to connect nodes based on that instead.
- 
-graph_nx_for_web.ipynb - draft notebook creating graphs using road and river networks only.
+# Just a semantic map creation from shapely OSM/IGN data
 
-# geomaps_with_pandas
-
-data_parser_test_alignment_2004.ipynb
-A project to get the .png maps of given resolution  from shapefiles using Geopandas and Shapely
-
+A project to get the .png maps of given resolution  from shapefiles using Geopandas and Shapely, the notebook is available here:
+### data_parser_test_alignment_2004.ipynb
 Having an image as a jp2 file and labels as vector data in .shp format, extract the vector data using the bounding boxes from an image, and then save the result as a .png file. 
 ![An example of the resulting png image created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/1-2017-0850-6680-LA93-0M50-E080.png)
 
