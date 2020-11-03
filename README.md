@@ -30,7 +30,7 @@ We also left an old demo for the graph creation form the IGN data, but we don't 
 A project to get the .png maps of given resolution  from shapefiles using Geopandas and Shapely, the notebook is available here:
 ### data_parser_test_alignment_2004.ipynb
 Having an image as a jp2 file and labels as vector data in .shp format, extract the vector data using the bounding boxes from an image, and then save the result as a .png file. 
-![An example of the resulting png image created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/1-2017-0850-6680-LA93-0M50-E080.png| width=200)
+![An example of the resulting png image created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/1-2017-0850-6680-LA93-0M50-E080.png | width=200)
 
 # Requirements
 Full project requirements are specified in requirements.txt
