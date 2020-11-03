@@ -2,7 +2,9 @@
 # Conversion of the geomaps in the shapefile form to graphs
 
 This project is a collection of notebooks performing different methods to create graphs and semantic labels from the shapefiles data.
+
 The most known geomaps open source is OSM, so the demo notebooks are adapted to use OSM shapefiles as can be found here: https://www.openstreetmap.org/
+
 We also use IGN data, available for research purposes under a license  "Recherche et Enseignement": https ://geoservices.ign.fr
 
 # OSM data & polygons
@@ -14,7 +16,7 @@ The polygons for Moselle deparments are given for the reference as well in a sha
 Please, check the notebook:
 ### RNG_graph_creation_demo.ipynb
 The notebook shows how to create RNG attributed  graphs using the algorithm introduced in [1].
-![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/meurthe_last_ign_rng.png.png)
+![An example of the resulting graph created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/meurthe_last_ign_rng.png)
 
 
 # Delaunay graphs creation script for OSM data
