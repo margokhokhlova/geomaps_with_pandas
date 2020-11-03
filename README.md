@@ -32,6 +32,22 @@ A project to get the .png maps of given resolution  from shapefiles using Geopan
 Having an image as a jp2 file and labels as vector data in .shp format, extract the vector data using the bounding boxes from an image, and then save the result as a .png file. 
 ![An example of the resulting png image created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/1-2017-0850-6680-LA93-0M50-E080.png?v=400&s=200)
 
+# Final data as txt files and dataloaders
+We save the final data as txt files. In total, we use 3 French departments and 4 distinct years (2004,2010,2014 and 2019) to create IGN cross-time graphs representing geo areas. OSM data are availbale for a signal date, and we use 2 out of 3 matching regions.
+The dataloader to upload the data from txt files is presented in the file
+### data_IGN.py
+To load the dataset with the node positions as NX graphs, execute:
+IGN04 = read_data('IGN04', #dataprefix
+                      with_classes=True,
+                      prefer_attr_nodes=True,
+                      prefer_attr_edges=False,
+                      produce_labels_nodes=False,
+                      as_graphs=True,
+                      is_symmetric=symmetric_dataset,
+                      path='.////%s/'% args.first_dataset.upper(), with_node_posistions = True)
+        
+ There also some quick function available to visualize the resulting graphs. 
+
 # Requirements
 Full project requirements are specified in requirements.txt
 The minimal requirements for graph creation notebooks are:
