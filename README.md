@@ -37,14 +37,14 @@ We save the final data as txt files. In total, we use 3 French departments and 4
 The dataloader to upload the data from txt files is presented in the file
 ### data_IGN.py
 To load the dataset with the node positions as NX graphs, execute:
-IGN04 = read_data('IGN04', #dataprefix
-                      with_classes=True,
-                      prefer_attr_nodes=True,
-                      prefer_attr_edges=False,
-                      produce_labels_nodes=False,
-                      as_graphs=True,
-                      is_symmetric=symmetric_dataset,
-                      path='.////%s/'% args.first_dataset.upper(), with_node_posistions = True)
+* IGN04 = read_data('IGN04', #dataprefix
+                      * with_classes=True,
+                      * prefer_attr_nodes=True,
+                      * prefer_attr_edges=False,
+                      * produce_labels_nodes=False,
+                      * as_graphs=True,
+                      * is_symmetric=symmetric_dataset,
+                      * path='.////%s/'% args.first_dataset.upper(), with_node_posistions = True)
         
  There also some quick function available to visualize the resulting graphs. 
 
