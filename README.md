@@ -67,15 +67,18 @@ The minimal requirements for graph creation notebooks are:
 
 # License
 All code found in this repository is licensed under GPLv3:
+
 Copyright 2019-2020 Margarita Khokhlova, margarita.khokhlova@ign.fr, margokhokhlova@gmail.com
+
 Graph creation Examples is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
+
 Graph creation Examples are distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details <https://www.gnu.org/licenses/>.
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+See the GNU General Public License for more details <https://www.gnu.org/licenses/>.
 
 # Aknowledgements
 This  work  is  supported  by  ANR,  the  French  National  Re-search Agency, within the ALEGORIA project, under GrantANR-17-CE38-0014-01.
