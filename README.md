@@ -56,6 +56,8 @@ This  is cross-temporal and cross-source dataset for French departments. The sam
  We provide the data in the form which is the most convenient for our two set of experiements, as described in [1]. There are 2 folders, ech per_department, and the graphs IDs match each other across all the subfolders in one folder, but not across the higher folders in the hierarchy. 
 
 Each separate data IGN+'Year' has the following components (inspired by the other commong graph dataset structure):
+
+
      IGN+'Year'_A.txt - edge list
      IGN+'Year'_edge_labels.txt - edge labels
      IGN+'Year'_graph_indicator.txt - list of the node-graph correspondences
