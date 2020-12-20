@@ -55,7 +55,7 @@ This  is cross-temporal and cross-source dataset for French departments. The sam
 
  We provide the data in the form which is the most convenient for our two set of experiements, as described in [1]. There are 2 folders, ech per_department, and the graphs IDs match each other across all the subfolders in one folder, but not across the higher folders in the hierarchy. 
 
-     Each separate data IGN+'Year' has the following components (inspired by the other commong graph dataset structure):
+Each separate data IGN+'Year' has the following components (inspired by the other commong graph dataset structure):
      IGN+'Year'_A.txt - edge list
      IGN+'Year'_edge_labels.txt - edge labels
      IGN+'Year'_graph_indicator.txt - list of the node-graph correspondences
@@ -120,6 +120,11 @@ See the GNU General Public License for more details <https://www.gnu.org/license
 
 # Aknowledgements
 This  work  is  supported  by  ANR,  the  French  National  Re-search Agency, within the ALEGORIA project, under GrantANR-17-CE38-0014-01.
+
+# To cite
+
+More information on the graph creation process in provided in the following article:
+Margarita Khokhlova, Nathalie Abadie, Valérie Gouet, Liming Chen. Learning embeddings for cross-time geographic areas represented as graphs. In 36th ACM/SIGAPP Symposium On Applied Computing - Technical Track Geographic Information Analysis. 2021.
 
 # Referencies
 1. Toussaint, G. T. (1980), "The relative neighborhood graph of a finite planar set", Pattern Recognition, 12 (4): 261–268, doi:10.1016/0031-3203(80)90066-7.
