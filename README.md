@@ -33,22 +33,60 @@ Having an image as a jp2 file and labels as vector data in .shp format, extract 
 ![An example of the resulting png image created](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/1-2017-0850-6680-LA93-0M50-E080.png?v=300&s=200)
 
 # Final data as txt files and dataloaders
-We save the final data as txt files. In total, we use 3 French departments and 4 distinct years (2004,2010,2014 and 2019) to create IGN cross-time graphs representing geo areas. OSM data are availbale for a signal date, and we use 2 out of 3 matching regions.
-The dataloader to upload the data from txt files is presented in the file
-### data_IGN.py
-To load the dataset with the node positions as NX graphs, execute:
 
-IGN04 = read_data('IGN04', #dataprefix
-                       with_classes=True,
-                       prefer_attr_nodes=True,
-                       prefer_attr_edges=False,
-                       produce_labels_nodes=False,
-                       as_graphs=True,
-                       is_symmetric=symmetric_dataset,
-                       path='.////%s/'% args.first_dataset.upper(), with_node_posistions = True)
-        
- There also some quick function available to visualize the resulting graphs. 
+The data can  be downloaded from here:
+https://drive.google.com/drive/folders/12cWiUhE278O4y2Z-hV6rMROvnVUoqxP5?usp=sharing
+These graph datasets are derived from exceirpts of the reference vector database produced by the French Mapping Agency (https://www.ign.fr/), namely the BDTOPO®
+    and Open Street Map (https://www.openstreetmap.org/), namely OSM.
 
+Each graph represents the geographic entites located in a bouding box of 200 m on each side, centered on a given point of interest, and theirs spatial relationships.
+
+  The graphs are built for BBOX located the following French admnistratives units:
+  - Moselle
+  - Meurthe-et-Moselle 
+
+  A distinct graph is built for each POI-centered BBOX, and for the following years:
+  - 2004
+  - 2010
+  - 2014
+  - 2019
+
+This  is cross-temporal and cross-source dataset for French departments. The same source and cross-source data are separated by folders.
+
+ We provide the data in the form which is the most convenient for our two set of experiements, as described in [1]. There are 2 folders, ech per_department, and the graphs IDs match each other across all the subfolders in one folder, but not across the higher folders in the hierarchy. 
+
+     Each separate data IGN+'Year' has the following components (inspired by the other commong graph dataset structure):
+     IGN+'Year'_A.txt - edge list
+     IGN+'Year'_edge_labels.txt - edge labels
+     IGN+'Year'_graph_indicator.txt - list of the node-graph correspondences
+     IGN+'Year'_graph_labels.txt - graph areas IDs
+     IGN+'Year'_node_attributes.txt - continious node attributes
+     IGN+'Year'_node_labels.txt - discreet node labels
+
+
+ Each deparment contains 4 distinct dates for IGN data. OSM data we use are dated 2020, however, there are also 4 sets of data to match the cross-time cross-search data retrieval/
+         /2004
+         /2010
+         /2014
+         /2019
+
+## DATALOADERS
+
+ To ease the use of our dataset, we provide the daloaders compatible with Pytorch 
+ Geometric (the code here is the modified code from Pytorch Geometric data loader)
+ 
+ You can find the daloader in the file:
+
+ ign_dataset.py
+
+ To upload the dataset, please import the dataloader from .py file to your workspace, then call:
+ ign = IGNDataset('/path/to/the folder/with/txt', prefix ='IGN_19',use_node_attr=True)
+ When loaded, the dataset can be passed to the torch_geometric.data.DataLoader as an argument.
+
+You can also display view the graphs, but we use a different dataloader for that.
+Please, check the following jupyter notebook from scripts folder for demos and details:
+results_visualization_notebook.ipynb
+    
 We envisaged the final task as the similarity-based graph matching across years and databases. 
 However,the task is not always trivial, the resulting graphs can be pretty different for different databases and across years.
 ![An example of two RNG graphs created from the same area for IGN and OSM](https://github.com/margokhokhlova/geomaps_with_pandas/blob/master/ign_osm_superimposed_rng_100_moselle.png?v=300&s=200)
